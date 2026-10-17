@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Jetha Kitchen Equipments</title>
+    <style>
+        :root { --primary: #c2410c; --dark: #1f2937; --light: #f3f4f6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); }
+        header { background: var(--dark); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.5rem; color: var(--primary); }
+        nav ul { list-style: none; display: flex; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: 500; }
+        nav a:hover, nav a.active { color: var(--primary); }
+        .page-header { background: var(--primary); color: white; text-align: center; padding: 40px 20px; }
+        .content { padding: 40px 5%; max-width: 1000px; margin: auto; background: white; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .content h2 { color: var(--primary); margin-bottom: 15px; }
+        .content p { margin-bottom: 15px; line-height: 1.8; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 768px) {
+            nav ul { display: none; flex-direction: column; background: var(--dark); position: absolute; top: 60px; right: 0; width: 100%; text-align: center; padding: 10px 0; }
+            nav ul.show { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jetha Kitchen Equipments</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h2>About Jetha Kitchen Equipments & Designings</h2>
+    </div>
+
+    <div class="content">
+        <h2>Our History</h2>
+        <p>Founded and managed by <strong>Mr. Mahesh Jetha</strong>, Jetha Kitchen Equipments & Designings is a premier manufacturer, supplier, and trader of robust commercial kitchen equipment based in Udaipur, Rajasthan. We specialize in providing comprehensive kitchen solutions that bring efficiency to commercial culinary environments.</p>
+        
+        <h2>Infrastructure</h2>
+        <p>We operate out of a highly equipped manufacturing facility located in the <strong>Gudli Industrial Area</strong>, Udaipur. Our corporate operations and direct client interactions are handled at our main office located Opposite Dalal Petrol Pump, B N College Road, Sevashram Road, Udaipur (313001).</p>
+        
+        <h2>Our Mission</h2>
+        <p>To deliver stainless steel excellence. Be it commercial setups, customized modular kitchens, catering equipment, deep fryers, or water coolers, our mission is to deliver durable, hygienic, and expertly designed products that help businesses succeed.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jetha Kitchen Equipments & Designings.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById("nav-links").classList.toggle("show"); }
+    </script>
+</body>
+</html>
