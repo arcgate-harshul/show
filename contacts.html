@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Jetha Kitchen Equipments</title>
+    <style>
+        :root { --primary: #c2410c; --dark: #1f2937; --light: #f3f4f6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); }
+        header { background: var(--dark); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.5rem; color: var(--primary); }
+        nav ul { list-style: none; display: flex; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: 500; }
+        nav a:hover, nav a.active { color: var(--primary); }
+        .page-header { background: var(--primary); color: white; text-align: center; padding: 40px 20px; }
+        
+        .contact-container { display: flex; flex-wrap: wrap; padding: 40px 5%; gap: 30px; max-width: 1200px; margin: auto; }
+        .contact-info, .contact-form { flex: 1; min-width: 300px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .contact-info h3 { color: var(--primary); margin-bottom: 15px; }
+        .contact-info p { margin-bottom: 10px; font-size: 1.1rem; }
+        .contact-info strong { color: var(--dark); }
+        
+        form { display: flex; flex-direction: column; gap: 15px; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+        button[type="submit"] { background: var(--primary); color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; font-size: 1.1rem; font-weight: bold; }
+        button[type="submit"]:hover { background: #9a3412; }
+        
+        .map-container { padding: 0 5%; margin-bottom: 40px; }
+        iframe { width: 100%; height: 400px; border: 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        
+        footer { background: var(--dark); color: white; text-align: center; padding: 20px; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        
+        @media (max-width: 768px) {
+            nav ul { display: none; flex-direction: column; background: var(--dark); position: absolute; top: 60px; right: 0; width: 100%; text-align: center; padding: 10px 0; }
+            nav ul.show { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jetha Kitchen Equipments</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h2>Get In Touch</h2>
+        <p>Contact us for bulk orders, customized equipment, or quotes.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><strong>Proprietor:</strong> Mr. Mahesh Jetha</p>
+            <p><strong>Mobile:</strong> <a href="tel:+919414162018" style="color:var(--primary); text-decoration:none;">+91-9414162018</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@jethakitchenequipments.com" style="color:var(--primary); text-decoration:none;">info@jethakitchenequipments.com</a></p>
+            <br>
+            <h3>Our Locations</h3>
+            <p><strong>Office Address:</strong> Opposite Dalal Petrol Pump, B N College Road, Sevashram Road, Udaipur, Rajasthan, 313001, India.</p>
+            <p><strong>Factory Address:</strong> Gudli Industrial Area, Udaipur, Rajasthan.</p>
+        </div>
+        
+        <div class="contact-form">
+            <h3>Send us an Inquiry</h3>
+            <form onsubmit="return submitForm(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                <textarea id="message" rows="5" placeholder="Tell us about your requirement..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <!-- Google Map Embedded Location for Sevashram Road Udaipur -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14511.084423851084!2d73.70823296181773!3d24.582496733276634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967e58a74136dbd%3A0x6b4cecc488d5e032!2sSevashram%20Chauraha%2C%20Udaipur%2C%20Rajasthan%20313001!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jetha Kitchen Equipments & Designings.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() { document.getElementById("nav-links").classList.toggle("show"); }
+        function submitForm(event) {
+            event.preventDefault();
+            alert("Thank you for reaching out to Jetha Kitchen Equipments! We will contact you shortly.");
+            document.querySelector("form").reset();
+        }
+    </script>
+</body>
+</html>
