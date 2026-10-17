@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetha Kitchen Equipments | Home</title>
+    <style>
+        :root { --primary: #c2410c; --dark: #1f2937; --light: #f3f4f6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { background: var(--dark); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1.5rem; color: var(--primary); }
+        nav ul { list-style: none; display: flex; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        nav a:hover, nav a.active { color: var(--primary); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?auto=format&fit=crop&w=1200&q=80') center/cover; height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px; }
+        .hero h2 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .btn:hover { background: #9a3412; }
+        .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px 5%; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+        footer { background: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        .menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 768px) {
+            nav ul { display: none; flex-direction: column; background: var(--dark); position: absolute; top: 60px; right: 0; width: 100%; text-align: center; padding: 10px 0; }
+            nav ul.show { display: flex; }
+            .menu-toggle { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jetha Kitchen Equipments</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Premium Commercial Kitchen Equipment</h2>
+            <p>Manufacturing high-quality commercial & modular kitchen equipment in Udaipur, Rajasthan.</p>
+            <a href="products.html" class="btn">Explore Products</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>Manufacturing Excellence</h3>
+            <p>Our Gudli factory is equipped with advanced machinery to manufacture durable kitchen products.</p>
+        </div>
+        <div class="card">
+            <h3>Custom Designings</h3>
+            <p>We provide custom modular kitchens and catering equipment designs tailored to your specific needs.</p>
+        </div>
+        <div class="card">
+            <h3>Trusted Quality</h3>
+            <p>Serving hotels, restaurants, and caterers across Rajasthan with robust and hygienic stainless steel products.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Jetha Kitchen Equipments & Designings. All rights reserved.</p>
+        <p>Call Us: +91-9414162018 | Sevashram Road, Udaipur</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
